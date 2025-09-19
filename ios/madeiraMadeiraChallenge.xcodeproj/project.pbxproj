@@ -7,34 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06286B08D1EA46878B2FEC60 /* Dosis-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D979FA631B43BC97EBC9F6 /* Dosis-ExtraLight.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-madeiraMadeiraChallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-madeiraMadeiraChallenge.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		3734DEA644564E1AA34A0663 /* Dosis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30DBEA99B0BF4633A64309FE /* Dosis-Bold.ttf */; };
+		4CB01820F27047DA93115516 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3B7A67CCE54DA4B40C6DA3 /* Dosis-Light.ttf */; };
+		4F1E43C3593F488E8ED157FF /* Dosis-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B3327618594D3096B05A4F /* Dosis-ExtraBold.ttf */; };
+		5901DA51939D4F16A66033A7 /* Dosis-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5080DD7076BA4F81B433BD02 /* Dosis-SemiBold.ttf */; };
+		5AB5480A7D284A218C9D72DE /* Dosis-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF536AADDFF449DAB660ED2F /* Dosis-Medium.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		7E8B8D5546804D4495E782C8 /* Dosis-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA14701E85443F7BC51D97C /* Dosis-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		EE782BF225E7F89527F500D7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = madeiraMadeiraChallenge;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D979FA631B43BC97EBC9F6 /* Dosis-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraLight.ttf"; path = "../assets/fonts/Dosis-ExtraLight.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* madeiraMadeiraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = madeiraMadeiraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = madeiraMadeiraChallenge/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = madeiraMadeiraChallenge/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = madeiraMadeiraChallenge/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		30DBEA99B0BF4633A64309FE /* Dosis-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Bold.ttf"; path = "../assets/fonts/Dosis-Bold.ttf"; sourceTree = "<group>"; };
+		36B3327618594D3096B05A4F /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraBold.ttf"; path = "../assets/fonts/Dosis-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-madeiraMadeiraChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-madeiraMadeiraChallenge.debug.xcconfig"; path = "Target Support Files/Pods-madeiraMadeiraChallenge/Pods-madeiraMadeiraChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		5080DD7076BA4F81B433BD02 /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-SemiBold.ttf"; path = "../assets/fonts/Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-madeiraMadeiraChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-madeiraMadeiraChallenge.release.xcconfig"; path = "Target Support Files/Pods-madeiraMadeiraChallenge/Pods-madeiraMadeiraChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-madeiraMadeiraChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-madeiraMadeiraChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = madeiraMadeiraChallenge/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = madeiraMadeiraChallenge/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DA14701E85443F7BC51D97C /* Dosis-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Regular.ttf"; path = "../assets/fonts/Dosis-Regular.ttf"; sourceTree = "<group>"; };
+		EB3B7A67CCE54DA4B40C6DA3 /* Dosis-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Light.ttf"; path = "../assets/fonts/Dosis-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EF536AADDFF449DAB660ED2F /* Dosis-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Medium.ttf"; path = "../assets/fonts/Dosis-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,14 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* madeiraMadeiraChallenge */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +89,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				F2D137439BAC454CA7BD1DC9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -114,6 +111,21 @@
 				5709B34CF0A7D63546082F79 /* Pods-madeiraMadeiraChallenge.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2D137439BAC454CA7BD1DC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30DBEA99B0BF4633A64309FE /* Dosis-Bold.ttf */,
+				36B3327618594D3096B05A4F /* Dosis-ExtraBold.ttf */,
+				12D979FA631B43BC97EBC9F6 /* Dosis-ExtraLight.ttf */,
+				EB3B7A67CCE54DA4B40C6DA3 /* Dosis-Light.ttf */,
+				EF536AADDFF449DAB660ED2F /* Dosis-Medium.ttf */,
+				8DA14701E85443F7BC51D97C /* Dosis-Regular.ttf */,
+				5080DD7076BA4F81B433BD02 /* Dosis-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,19 +184,20 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				EE782BF225E7F89527F500D7 /* PrivacyInfo.xcprivacy in Resources */,
+				3734DEA644564E1AA34A0663 /* Dosis-Bold.ttf in Resources */,
+				4F1E43C3593F488E8ED157FF /* Dosis-ExtraBold.ttf in Resources */,
+				06286B08D1EA46878B2FEC60 /* Dosis-ExtraLight.ttf in Resources */,
+				4CB01820F27047DA93115516 /* Dosis-Light.ttf in Resources */,
+				5AB5480A7D284A218C9D72DE /* Dosis-Medium.ttf in Resources */,
+				7E8B8D5546804D4495E782C8 /* Dosis-Regular.ttf in Resources */,
+				5901DA51939D4F16A66033A7 /* Dosis-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,14 +288,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* madeiraMadeiraChallenge */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
@@ -408,7 +413,14 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -473,7 +485,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

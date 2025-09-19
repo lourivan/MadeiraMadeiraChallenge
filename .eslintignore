@@ -1,0 +1,8 @@
+@types
+src/lib/**
+.vscode
+android
+build
+ios
+e2e
+.jest
