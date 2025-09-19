@@ -43,6 +43,15 @@ const Plp: React.FC<PlpScreenProps> = () => {
     )
   }
 
+  const PlpList: React.FC = (item: ProductsType) => (
+    <>
+      <ListItem
+        item={item}
+        onPress={() => navigation.navigate('Detalhes', { productId: item.id })}
+      />
+    </>
+  )
+
   return (
     <S.Container>
       <S.Header>📱 Catálogo de produtos</S.Header>
@@ -52,12 +61,7 @@ const Plp: React.FC<PlpScreenProps> = () => {
         keyExtractor={item => String(item.id)}
         renderItem={({ item }) => (
           <>
-            <ListItem
-              item={item}
-              onPress={() =>
-                navigation.navigate('Detalhes', { productId: item.id })
-              }
-            />
+            <PlpList item={item} />
           </>
         )}
         initialNumToRender={10}
