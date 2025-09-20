@@ -22,23 +22,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12D979FA631B43BC97EBC9F6 /* Dosis-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraLight.ttf"; path = "../assets/fonts/Dosis-ExtraLight.ttf"; sourceTree = "<group>"; };
+		12D979FA631B43BC97EBC9F6 /* Dosis-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraLight.ttf"; path = "../assets/fonts/Dosis-ExtraLight.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* madeiraMadeiraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = madeiraMadeiraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = madeiraMadeiraChallenge/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = madeiraMadeiraChallenge/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = madeiraMadeiraChallenge/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		30DBEA99B0BF4633A64309FE /* Dosis-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Bold.ttf"; path = "../assets/fonts/Dosis-Bold.ttf"; sourceTree = "<group>"; };
-		36B3327618594D3096B05A4F /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraBold.ttf"; path = "../assets/fonts/Dosis-ExtraBold.ttf"; sourceTree = "<group>"; };
+		30DBEA99B0BF4633A64309FE /* Dosis-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Bold.ttf"; path = "../assets/fonts/Dosis-Bold.ttf"; sourceTree = "<group>"; };
+		36B3327618594D3096B05A4F /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraBold.ttf"; path = "../assets/fonts/Dosis-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-madeiraMadeiraChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-madeiraMadeiraChallenge.debug.xcconfig"; path = "Target Support Files/Pods-madeiraMadeiraChallenge/Pods-madeiraMadeiraChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		5080DD7076BA4F81B433BD02 /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-SemiBold.ttf"; path = "../assets/fonts/Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
+		5080DD7076BA4F81B433BD02 /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-SemiBold.ttf"; path = "../assets/fonts/Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-madeiraMadeiraChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-madeiraMadeiraChallenge.release.xcconfig"; path = "Target Support Files/Pods-madeiraMadeiraChallenge/Pods-madeiraMadeiraChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-madeiraMadeiraChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-madeiraMadeiraChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = madeiraMadeiraChallenge/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = madeiraMadeiraChallenge/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8DA14701E85443F7BC51D97C /* Dosis-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Regular.ttf"; path = "../assets/fonts/Dosis-Regular.ttf"; sourceTree = "<group>"; };
-		EB3B7A67CCE54DA4B40C6DA3 /* Dosis-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Light.ttf"; path = "../assets/fonts/Dosis-Light.ttf"; sourceTree = "<group>"; };
+		8DA14701E85443F7BC51D97C /* Dosis-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Regular.ttf"; path = "../assets/fonts/Dosis-Regular.ttf"; sourceTree = "<group>"; };
+		EB3B7A67CCE54DA4B40C6DA3 /* Dosis-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Light.ttf"; path = "../assets/fonts/Dosis-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EF536AADDFF449DAB660ED2F /* Dosis-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Medium.ttf"; path = "../assets/fonts/Dosis-Medium.ttf"; sourceTree = "<group>"; };
+		EF536AADDFF449DAB660ED2F /* Dosis-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Medium.ttf"; path = "../assets/fonts/Dosis-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,6 @@
 				5080DD7076BA4F81B433BD02 /* Dosis-SemiBold.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,10 +412,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -485,10 +481,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

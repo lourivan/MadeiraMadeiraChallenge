@@ -1,27 +1,87 @@
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer, StaticParamList } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import CartButton from '~/commons/components/cartButton'
-
+import { AppTheme } from '~/commons/theme/defaultTheme'
+import Loader from '~/commons/components/loader'
 // Routes
 import Plp from '~/modules/PLP/pages/plp'
 import Pdp from '~/modules/PDP/pages/pdp'
 import Cart from '~/modules/Cart/pages/cart'
+import { Text } from 'react-native'
 
 const Stack = createNativeStackNavigator()
 
+type RootStackParamList = StaticParamList<typeof Stack>
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
 export default function AppRoutes() {
+  const linking = {
+    enabled: 'auto',
+    prefixes: ['myapp://'],
+    config: {
+      screens: {
+        Produtos: 'products',
+        Carrinho: 'cart',
+        Detalhes: 'product/:id',
+      },
+    },
+  }
+
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Produtos">
-        <Stack.Screen name="Produtos" options={({navigation}) => ({
-          title: 'Sample Commerce', 
-          headerRight: () => (<><CartButton navigation={navigation} /></>)
-        })} component={Plp} />
-        <Stack.Screen name="Detalhes" options={({navigation}) => ({
-          title: 'Detalhes do produto', 
-          headerRight: () => (<><CartButton navigation={navigation} /></>)
-        })} component={Pdp} />
-        <Stack.Screen name="Carrinho" component={Cart} />
+    <NavigationContainer
+      theme={AppTheme}
+      linking={linking}
+      fallback={<Text>Loading...</Text>}
+    >
+      <Stack.Navigator
+        initialRouteName='Produtos'
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: AppTheme.colors.card,
+          },
+          headerTitleStyle: {
+            fontSize: 20,
+            fontWeight: 'bold',
+            color: AppTheme.colors.primary,
+          },
+          headerTitleAlign: 'center',
+        }}
+      >
+        <Stack.Screen
+          name='Produtos'
+          options={({ navigation }) => ({
+            headerRight: () => (
+              <>
+                <CartButton navigation={navigation} />
+              </>
+            ),
+          })}
+          component={Plp}
+        />
+
+        <Stack.Screen
+          name='Detalhes'
+          options={({ navigation }) => ({
+            headerBackTitle: 'Voltar',
+            title: 'Detalhes do produto',
+            headerRight: () => (
+              <>
+                <CartButton navigation={navigation} />
+              </>
+            ),
+          })}
+          component={Pdp}
+        />
+
+        <Stack.Screen
+          options={{ headerBackTitle: 'voltar' }}
+          name='Carrinho'
+          component={Cart}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

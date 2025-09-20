@@ -1,15 +1,5 @@
-import React, { useCallback, useMemo } from 'react'
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-  Pressable,
-  Image,
-} from 'react-native'
+import React, { useMemo } from 'react'
 import { useCart } from '~/providers/CartProvider'
-import { formatarMoedaBRL } from '~/commons/utils/formatCurrency'
 import CartItem from '~/modules/Cart/components/cartItem'
 import CartFooter from '~/modules/Cart/components/cartFooter'
 import EmptyContent from '~/commons/components/EmptyContent'
@@ -18,9 +8,10 @@ import { CartContainer, CartList } from '~/modules/Cart/pages/style'
 const Cart: React.FC = () => {
   const { cartItems, addToCart, removeFromCart, decrementFromCart } = useCart()
 
-  const total = useMemo(() => {
+  const total: number = useMemo(() => {
     return cartItems.reduce((sum, item) => {
-      return sum + (isNaN(item.price) ? 0 : item.price * item.quantity)
+      const quantity = item.quantity ?? 1
+      return sum + (isNaN(item.price) ? 0 : item.price * quantity)
     }, 0)
   }, [cartItems])
 

@@ -12,7 +12,7 @@ interface LoaderProps {
 
 const Loader: React.FC<LoaderProps> = ({ text = 'Carregando...' }) => {
   return (
-    <LoaderContainer>
+    <LoaderContainer testID='loader'>
       <LoaderItem size='large' />
       <LoaderText testID='textLoader'>{text}</LoaderText>
     </LoaderContainer>

@@ -1,26 +1,17 @@
-import React, { ReactElement } from 'react'
-import { render, fireEvent } from '@testing-library/react-native'
+import React from 'react'
 import Cart from '~/modules/Cart/pages/cart'
-import {
-  CartProvider,
-  ProductsCartProps,
-  useCart,
-} from '~/providers/CartProvider'
-import { ProductsType } from '~/commons/types/productTypes'
-
-const renderWithProvider = ui => {
-  return render(<CartProvider>{ui}</CartProvider>)
-}
+import { ProductsCartProps, useCart } from '~/providers/CartProvider'
+import { render, fireEvent } from '~/commons/utils/test-utils'
 
 describe('Cart Screen', () => {
-  it('mostra carrinho vazio após carregar', async () => {
+  it('Show expty cart after load', async () => {
     jest.useFakeTimers()
-    const { getByText } = renderWithProvider(<Cart />)
+    const { getByText } = render(<Cart />)
     jest.runAllTimers()
     expect(getByText('Seu carrinho está vazio 🛒')).toBeTruthy()
   })
 
-  it('adiciona item e mostra no carrinho', async () => {
+  it('Add product in the cart and show then', async () => {
     const Wrapper = () => {
       const { addToCart } = useCart()
       const itensCart: ProductsCartProps = {
@@ -37,14 +28,14 @@ describe('Cart Screen', () => {
       return <Cart />
     }
 
-    const { getByText, getAllByText } = renderWithProvider(<Wrapper />)
+    const { getByText, getAllByText } = render(<Wrapper />)
     jest.runAllTimers()
 
     expect(getByText('Produto Teste')).toBeTruthy()
     expect(getAllByText('R$ 100,00')[0]).toBeTruthy()
   })
 
-  it('incrementa e decrementa quantidade', async () => {
+  it('Increase and decrease item', async () => {
     const Wrapper = () => {
       const { addToCart } = useCart()
       const itensCart: ProductsCartProps = {
@@ -61,7 +52,7 @@ describe('Cart Screen', () => {
       return <Cart />
     }
 
-    const { getByText, getAllByText } = renderWithProvider(<Wrapper />)
+    const { getByText, getAllByText } = render(<Wrapper />)
     jest.runAllTimers()
 
     expect(getByText('1')).toBeTruthy()
@@ -73,7 +64,7 @@ describe('Cart Screen', () => {
     expect(getByText('1')).toBeTruthy()
   })
 
-  it('remove item do carrinho', async () => {
+  it('Remove item from the cart', async () => {
     const Wrapper = () => {
       const { addToCart } = useCart()
       const itensCart: ProductsCartProps = {
@@ -89,10 +80,11 @@ describe('Cart Screen', () => {
       return <Cart />
     }
 
-    const { getByText, queryByText } = renderWithProvider(<Wrapper />)
+    const { getByText, queryByText } = render(<Wrapper />)
     jest.runAllTimers()
 
     fireEvent.press(getByText('✕'))
     expect(queryByText('Produto Remover')).toBeNull()
+    expect(getByText('Seu carrinho está vazio 🛒')).toBeTruthy()
   })
 })

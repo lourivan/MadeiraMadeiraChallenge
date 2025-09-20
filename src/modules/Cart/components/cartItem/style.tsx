@@ -1,16 +1,17 @@
 import styled from 'styled-components/native'
 
-export const CardContainer = styled.View`
+export const CardContainer = styled.View.attrs({
+  style: { shadowOffset: { width: 0, height: 2 } },
+})`
   flex-direction: row;
-  alignItems: center;
-  background-color: #FFF;
+  align-items: center;
+  background-color: #fff;
   margin-horizontal: 16px;
   margin-vertical: 8px;
   border-radius: 12px;
   padding: 12px;
   shadow-color: #000;
   shadow-opacity: 0.05;
-  shadow-offset: { width: 0; height: 2px };
   shadow-radius: 3px;
   elevation: 2;
 `
@@ -35,11 +36,11 @@ export const CardTitle = styled.Text`
 `
 
 export const Price = styled.Text`
-  fontSize: 15px;
+  fontsize: 15px;
   font-weight: bold;
-  color: #2ECC71;
+  color: #2ecc71;
   margin-bottom: 6px;
-` 
+`
 
 export const QuantityContainer = styled.View`
   flex-direction: row;
@@ -56,7 +57,7 @@ export const QtyButton = styled.Pressable`
 `
 
 export const QtyText = styled.Text`
-  fontSize: 18px;
+  font-size: 18px;
   font-weight: bold;
   color: #333;
 `
@@ -69,13 +70,13 @@ export const QtyValue = styled.Text`
 
 export const RemoveButton = styled.Pressable`
   margin-left: 10px;
-  background-color: #FDEDEC;
+  background-color: #fdedec;
   padding: 8px;
   border-radius: 20px;
 `
 
 export const RemoveText = styled.Text`
-  color: #E74C3C;
+  color: #e74c3c;
   font-size: 14ppx;
   font-weight: bold;
 `

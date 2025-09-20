@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import * as S from '~/modules/PLP/pages/styles'
 import { getProducts } from '~/modules/PLP/services/listProductsService'
 import { ProductsType } from '~/commons/types/productTypes'
-import { RootStackParamList } from '~/routes/navigationTypes'
+import EmptyContent from '~/commons/components/EmptyContent'
 import ListItem from '~/modules/PLP/components/ListItem'
 import Loader from '~/commons/components/loader'
 import { useNavigation } from '@react-navigation/native'
 
-type PlpScreenProps = NativeStackScreenProps<RootStackParamList, 'Produtos'>
-
-interface PlpListItem {
-  item: ProductsType
-}
-
-const Plp: React.FC<PlpScreenProps> = () => {
+const Plp: React.FC = () => {
   const [products, setProducts] = useState<ProductsType[]>([])
   const [loading, setLoading] = useState<boolean>(true)
   const navigation = useNavigation()
@@ -36,37 +29,35 @@ const Plp: React.FC<PlpScreenProps> = () => {
   }, [])
 
   if (loading) {
-    return (
-      <>
-        <Loader text='Carregando produtos' />
-      </>
-    )
+    return <Loader text='Carregando produtos...' />
   }
 
-  const PlpList: React.FC = (item: ProductsType) => (
-    <>
-      <ListItem
-        item={item}
-        onPress={() => navigation.navigate('Detalhes', { productId: item.id })}
-      />
-    </>
-  )
-
   return (
-    <S.Container>
-      <S.Header>📱 Catálogo de produtos</S.Header>
-      <S.ListItens
-        data={products}
-        windowSize={8}
-        keyExtractor={item => String(item.id)}
-        renderItem={({ item }) => (
-          <>
-            <PlpList item={item} />
-          </>
-        )}
-        initialNumToRender={10}
-      />
-    </S.Container>
+    <>
+      {!products.length ? (
+        <EmptyContent text='Não ha produtos a serem exibidos' />
+      ) : (
+        <S.Container>
+          <S.Header testID='TextHeader'>Catálogo de produtos</S.Header>
+          <S.ListItens
+            data={products}
+            windowSize={8}
+            keyExtractor={item => String(item.id)}
+            renderItem={({ item }) => (
+              <>
+                <ListItem
+                  item={item}
+                  onPress={() =>
+                    navigation.navigate('Detalhes', { productId: item.id })
+                  }
+                />
+              </>
+            )}
+            initialNumToRender={10}
+          />
+        </S.Container>
+      )}
+    </>
   )
 }
 

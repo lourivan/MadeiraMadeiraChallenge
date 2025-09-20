@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native'
-import { useNavigation } from '@react-navigation/native'
-import type { NativeStackScreenProps } from '@react-navigation/native-stack'
-import { ProductsType } from '~/commons/types/productTypes'
-import { RootStackParamList } from '~/routes/navigationTypes'
+import React, { useState, useEffect, useCallback } from 'react'
+import { ScrollView } from 'react-native'
+import { useNavigation, StaticScreenProps } from '@react-navigation/native'
 import { getProductDetail } from '~/modules/PDP/services/productDetailService'
 import { formatarMoedaBRL } from '~/commons/utils/formatCurrency'
-import { useCart } from '~/providers/CartProvider'
+import { useCart, ProductsCartProps } from '~/providers/CartProvider'
 import EmptyContent from '~/commons/components/EmptyContent'
 import * as S from '~/modules/PDP/pages/style'
 import Loader from '~/commons/components/loader'
+import { Toast } from 'toastify-react-native'
 
-type PdpScreenProps = NativeStackScreenProps<RootStackParamList, 'Detalhes'>
+type Props = StaticScreenProps<{
+  productId: number
+}>
 
-const Pdp = ({ route }: PdpScreenProps) => {
-  const [product, setProduct] = useState<ProductsType>()
+const Pdp: React.FC<Props> = ({ route }) => {
+  const [product, setProduct] = useState<ProductsCartProps>()
   const [loading, setLoading] = useState<boolean>(true)
   const { addToCart } = useCart()
   const { productId } = route.params
@@ -35,7 +28,14 @@ const Pdp = ({ route }: PdpScreenProps) => {
           setProduct(data)
         }
       } catch (err) {
-        console.log(err)
+        Toast.show({
+          type: 'error',
+          text1: 'Que pena',
+          text2: 'O produto que você procura não esta disponível',
+          position: 'bottom',
+          visibilityTime: 4000,
+          autoHide: true,
+        })
       } finally {
         setLoading(false)
       }
@@ -43,10 +43,12 @@ const Pdp = ({ route }: PdpScreenProps) => {
     fetchData()
   }, [productId])
 
-  const addItemTocart = (product: ProductsType) => {
-    addToCart(product)
-    navigation.navigate('Carrinho')
-  }
+  const addItemTocart = useCallback(() => {
+    if (product) {
+      addToCart(product)
+      navigation.navigate('Carrinho')
+    }
+  }, [product])
 
   if (loading) {
     return (
@@ -71,7 +73,7 @@ const Pdp = ({ route }: PdpScreenProps) => {
             <S.Price>{formatarMoedaBRL(product.price)}</S.Price>
 
             <S.CartButton
-              onPress={() => addItemTocart(product)}
+              onPress={addItemTocart}
               accessibilityLabel='Pressione para adicionar o item ao carrinho'
               accessibilityRole='button'
             >

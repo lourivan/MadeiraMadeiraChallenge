@@ -7,5 +7,11 @@ module.exports = {
   tabWidth: 2,
   endOfLine: "lf",
   bracketSpacing: true,
-  parser: "typescript"
+  parser: "typescript",
+  "lint-staged": {
+      "*.tsx": [
+      "organize-imports-cli",
+      "prettier --write"
+      ]
+  },
 };

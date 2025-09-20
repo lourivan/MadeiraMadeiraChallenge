@@ -1,12 +1,12 @@
-import React, { useContext, useState, createContext } from 'react'
+import { useContext, useState, createContext, ReactNode } from 'react'
 import { ProductsType } from '~/commons/types/productTypes'
 
 export interface ProductsCartProps extends ProductsType {
-  quantity: number
+  quantity?: number
 }
 
-interface CartContextProps extends React.FC {
-  cartItems: ProductsCartProps
+interface CartContextProps {
+  cartItems: ProductsCartProps[]
   addToCart: (product: ProductsCartProps) => void
   decrementFromCart: (id: number) => void
   removeFromCart: (index: number) => void
@@ -15,7 +15,7 @@ interface CartContextProps extends React.FC {
 
 const CartContext = createContext<CartContextProps>({} as CartContextProps)
 
-const CartProvider = ({ children }) => {
+const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<ProductsCartProps[]>([])
 
   const addToCart = (product: ProductsCartProps) => {
@@ -24,7 +24,7 @@ const CartProvider = ({ children }) => {
 
       if (existingIndex >= 0) {
         const updatedCart = [...prev]
-        updatedCart[existingIndex].quantity += 1
+        updatedCart[existingIndex].quantity! += 1
         return updatedCart
       }
 
@@ -38,8 +38,9 @@ const CartProvider = ({ children }) => {
 
       if (existingIndex >= 0) {
         const updatedCart = [...prev]
-        if (updatedCart[existingIndex].quantity > 1) {
-          updatedCart[existingIndex].quantity -= 1
+        const qty = updatedCart[existingIndex].quantity ?? 1
+        if (qty > 1) {
+          updatedCart[existingIndex].quantity! -= 1
         } else {
           updatedCart.splice(existingIndex, 1)
         }
