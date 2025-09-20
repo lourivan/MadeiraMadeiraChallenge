@@ -20,7 +20,6 @@ declare global {
 
 export default function AppRoutes() {
   const linking = {
-    enabled: 'auto',
     prefixes: ['myapp://'],
     config: {
       screens: {
