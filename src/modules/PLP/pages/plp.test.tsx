@@ -1,6 +1,6 @@
 import axios from 'axios'
-import Plp from '~/modules/PLP/pages/plp'
 import { render, screen, waitFor } from '~/commons/utils/test-utils'
+import Plp from '~/modules/PLP/pages/plp'
 
 jest.mock('axios')
 const mockedAxios = axios as jest.Mocked<typeof axios>

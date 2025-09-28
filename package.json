@@ -10,6 +10,9 @@
     "test": "jest",
     "clean": "rm -rf node_modules && rm -rf package-lock.json && rm yarn.lock && rm -rf ios/Pods && rm -rf ios/Podfile.lock",
     "e2eDebug": "npx detox test --configuration ios.sim.debug",
+    "detoxBuildIos": "detox build -c ios.sim.debug",
+    "test:report": "npx live-server test/coverage/lcov-report ",
+    "organize": "find src/ -iname '*.tsx' | xargs organize-imports-cli",
     "postinstall": "npx pod-install"
   },
   "dependencies": {
@@ -59,6 +62,7 @@
     "eslint-plugin-react-native": "^5.0.0",
     "globals": "^16.4.0",
     "jest": "^29",
+    "jest-sonar": "^0.2.16",
     "organize-imports-cli": "^0.10.0",
     "prettier": "2.8.8",
     "prettier-eslint": "^16.4.2",
@@ -70,6 +74,9 @@
   },
   "engines": {
     "node": ">=18"
+  },
+   "resolutions": {
+    "@types/react": "19.1.0"
   },
   "main": "index.js",
   "author": "Lourivan Rodrigues <lourivan.rodrigues@gmail.com>",

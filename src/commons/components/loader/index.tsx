@@ -1,9 +1,7 @@
 import React, { memo } from 'react'
 
 import {
-  LoaderContainer,
-  LoaderText,
-  LoaderItem,
+    LoaderContainer, LoaderItem, LoaderText
 } from '~/commons/components/loader/style'
 
 interface LoaderProps {

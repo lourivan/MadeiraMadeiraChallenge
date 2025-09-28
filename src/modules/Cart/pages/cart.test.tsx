@@ -1,7 +1,7 @@
 import React from 'react'
+import { fireEvent, render } from '~/commons/utils/test-utils'
 import Cart from '~/modules/Cart/pages/cart'
 import { ProductsCartProps, useCart } from '~/providers/CartProvider'
-import { render, fireEvent } from '~/commons/utils/test-utils'
 
 describe('Cart Screen', () => {
   it('Show expty cart after load', async () => {

@@ -1,33 +1,33 @@
 import React, { memo } from 'react'
 
-import {
-  Card,
-  Thumbnail,
-  Info,
-  Title,
-  Description,
-  Price,
-} from '~/modules/PLP/pages/styles'
 import { ProductsType } from '~/commons/types/productTypes'
 import { formatarMoedaBRL } from '~/commons/utils/formatCurrency'
+import {
+    Card, Description, Info, Price, Thumbnail, Title
+} from '~/modules/PLP/pages/styles'
 
 interface ItemListProps {
   item: ProductsType
   onPress: () => void
+  testID?: string
 }
 
-const ListItem: React.FC<ItemListProps> = ({ item, onPress }) => {
+const ListItem: React.FC<ItemListProps> = ({ item, onPress, testID }) => {
   return (
     <Card
       onPress={onPress}
-      testID='cardItem'
+      testID={testID}
       accessibilityLabel='Pressione para ir para os detalhes do produto'
     >
-      <Thumbnail source={{ uri: item.image }} />
+      <Thumbnail testID={`${testID}_plpImage`} source={{ uri: item.image }} />
       <Info>
-        <Title>{item.title}</Title>
-        <Description>{item.category}</Description>
-        <Price>{formatarMoedaBRL(item.price)}</Price>
+        <Title testID={`${testID}_plpTitle`}>{item.title}</Title>
+        <Description testID={`${testID}_plpCategory`}>
+          {item.category}
+        </Description>
+        <Price testID={`${testID}_plpPrice`}>
+          {formatarMoedaBRL(item.price)}
+        </Price>
       </Info>
     </Card>
   )

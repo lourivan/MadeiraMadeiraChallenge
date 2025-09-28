@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
-import { useCart } from '~/providers/CartProvider'
-import CartItem from '~/modules/Cart/components/cartItem'
-import CartFooter from '~/modules/Cart/components/cartFooter'
 import EmptyContent from '~/commons/components/EmptyContent'
+import CartFooter from '~/modules/Cart/components/cartFooter'
+import CartItem from '~/modules/Cart/components/cartItem'
 import { CartContainer, CartList } from '~/modules/Cart/pages/style'
+import { useCart } from '~/providers/CartProvider'
 
 const Cart: React.FC = () => {
   const { cartItems, addToCart, removeFromCart, decrementFromCart } = useCart()
@@ -25,11 +25,13 @@ const Cart: React.FC = () => {
         <>
           <CartList
             data={cartItems}
+            testID='wrapperCart'
             keyExtractor={item => String(item.id)}
             renderItem={({ item, index }) => (
               <>
                 <CartItem
                   item={item}
+                  testID={`cartItem_${index}`}
                   incrementCallback={() => addToCart(item)}
                   decremenCallback={() => decrementFromCart(item.id)}
                   removeFromCart={() => removeFromCart(index)}

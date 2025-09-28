@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import { StaticScreenProps, useNavigation } from '@react-navigation/native'
+import React, { useCallback, useEffect, useState } from 'react'
 import { ScrollView } from 'react-native'
-import { useNavigation, StaticScreenProps } from '@react-navigation/native'
-import { getProductDetail } from '~/modules/PDP/services/productDetailService'
-import { formatarMoedaBRL } from '~/commons/utils/formatCurrency'
-import { useCart, ProductsCartProps } from '~/providers/CartProvider'
-import EmptyContent from '~/commons/components/EmptyContent'
-import * as S from '~/modules/PDP/pages/style'
-import Loader from '~/commons/components/loader'
 import { Toast } from 'toastify-react-native'
+import EmptyContent from '~/commons/components/EmptyContent'
+import Loader from '~/commons/components/loader'
+import { formatarMoedaBRL } from '~/commons/utils/formatCurrency'
+import * as S from '~/modules/PDP/pages/style'
+import { getProductDetail } from '~/modules/PDP/services/productDetailService'
+import { ProductsCartProps, useCart } from '~/providers/CartProvider'
 
 type Props = StaticScreenProps<{
   productId: number
@@ -63,17 +63,27 @@ const Pdp: React.FC<Props> = ({ route }) => {
       {product ? (
         <ScrollView>
           <S.Container
+            testID='containerPdp'
             accessible={true}
             accessibilityLabel='Isso é uma peagina de detalhes do produto'
           >
             <S.Category testID='productCategory'>{product.category}</S.Category>
-            <S.Img source={{ uri: product.image }} alt='Imagem do produto' />
-            <S.Title>{product.title}</S.Title>
-            <S.Description>{product.description}</S.Description>
-            <S.Price>{formatarMoedaBRL(product.price)}</S.Price>
+            <S.Img
+              testID='productImage'
+              source={{ uri: product.image }}
+              alt='Imagem do produto'
+            />
+            <S.Title testID='productTitle'>{product.title}</S.Title>
+            <S.Description testID='productDescription'>
+              {product.description}
+            </S.Description>
+            <S.Price testID='productPrice'>
+              {formatarMoedaBRL(product.price)}
+            </S.Price>
 
             <S.CartButton
               onPress={addItemTocart}
+              testID='addToCart'
               accessibilityLabel='Pressione para adicionar o item ao carrinho'
               accessibilityRole='button'
             >

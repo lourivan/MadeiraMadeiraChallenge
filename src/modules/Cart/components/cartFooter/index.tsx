@@ -13,7 +13,9 @@ const CartFooter: React.FC<FotterProps> = ({ total }) => {
     <S.Footer>
       <View>
         <S.TotalLabel>Total</S.TotalLabel>
-        <S.TotalValue>{formatarMoedaBRL(total)}</S.TotalValue>
+        <S.TotalValue testID='textCartTotal'>
+          {formatarMoedaBRL(total)}
+        </S.TotalValue>
       </View>
 
       <S.CheckoutButton>

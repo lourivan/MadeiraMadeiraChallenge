@@ -1,11 +1,11 @@
 import React, { memo, useCallback } from 'react'
-import { useCart } from '~/providers/CartProvider'
 import {
-  TouchableCart,
-  CartText,
   Badge,
   BadgeText,
+  CartText,
+  TouchableCart,
 } from '~/commons/components/cartButton/styles'
+import { useCart } from '~/providers/CartProvider'
 
 interface CartProps {
   navigation: any
@@ -25,6 +25,7 @@ const CartButton: React.FC<CartProps> = ({ navigation }) => {
 
   return (
     <TouchableCart
+      testID='cartButtonHeader'
       onPress={redirectButton}
       accessibilityLabel='Pressione aqui para acessar a página do carrinho'
     >

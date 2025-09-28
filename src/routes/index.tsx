@@ -1,6 +1,6 @@
 import React from 'react'
-import AppRoutes from '~/routes/app.routes'
 import styled from 'styled-components/native'
+import AppRoutes from '~/routes/app.routes'
 
 const Wrapper = styled.View`
   flex: 1;

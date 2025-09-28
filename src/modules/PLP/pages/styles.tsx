@@ -14,7 +14,7 @@ export const Header = styled.Text`
 export const List = styled.View`
   padding-horizontal: 16px;
 `
-export const Card = styled.Pressable.attrs({
+export const Card = styled.TouchableOpacity.attrs({
   style: { width: 0, height: 2 },
 })`
   flex-direction: row;

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import { useNavigation } from '@react-navigation/native'
+import React, { useEffect, useState } from 'react'
+import EmptyContent from '~/commons/components/EmptyContent'
+import Loader from '~/commons/components/loader'
+import { ProductsType } from '~/commons/types/productTypes'
+import ListItem from '~/modules/PLP/components/ListItem'
 import * as S from '~/modules/PLP/pages/styles'
 import { getProducts } from '~/modules/PLP/services/listProductsService'
-import { ProductsType } from '~/commons/types/productTypes'
-import EmptyContent from '~/commons/components/EmptyContent'
-import ListItem from '~/modules/PLP/components/ListItem'
-import Loader from '~/commons/components/loader'
-import { useNavigation } from '@react-navigation/native'
 
 const Plp: React.FC = () => {
   const [products, setProducts] = useState<ProductsType[]>([])
@@ -43,10 +43,11 @@ const Plp: React.FC = () => {
             data={products}
             windowSize={8}
             keyExtractor={item => String(item.id)}
-            renderItem={({ item }) => (
+            renderItem={({ index, item }) => (
               <>
                 <ListItem
                   item={item}
+                  testID={`cardItem_${index}`}
                   onPress={() =>
                     navigation.navigate('Detalhes', { productId: item.id })
                   }

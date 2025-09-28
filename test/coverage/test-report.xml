@@ -1,0 +1,21 @@
+<testExecutions version="1">
+<file path="src/commons/components/cartButton/cartButton.test.tsx">
+<testCase name="Cart button component Should render button cart and badge with total items" duration="157" />
+</file>
+<file path="src/commons/utils/formatCurrency.test.ts">
+<testCase name="FormatCurrency deve formatar um n&#xfa;mero inteiro para BRL corretamente" duration="70" />
+<testCase name="FormatCurrency deve formatar um n&#xfa;mero decimal para BRL corretamente" duration="1" />
+<testCase name="FormatCurrency deve formatar zero corretamente" duration="1" />
+<testCase name="FormatCurrency deve formatar valores negativos corretamente" duration="1" />
+</file>
+<file path="src/modules/Cart/pages/cart.test.tsx">
+<testCase name="Cart Screen Show expty cart after load" duration="167" />
+<testCase name="Cart Screen Add product in the cart and show then" duration="612" />
+<testCase name="Cart Screen Increase and decrease item" duration="105" />
+<testCase name="Cart Screen Remove item from the cart" duration="27" />
+</file>
+<file path="src/modules/PLP/pages/plp.test.tsx">
+<testCase name="ProductList Screen Should show loader and no products in the screen" duration="201" />
+<testCase name="ProductList Screen Render products list after load" duration="745" />
+</file>
+</testExecutions>

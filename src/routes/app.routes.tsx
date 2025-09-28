@@ -2,12 +2,11 @@ import { NavigationContainer, StaticParamList } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import CartButton from '~/commons/components/cartButton'
 import { AppTheme } from '~/commons/theme/defaultTheme'
-import Loader from '~/commons/components/loader'
 // Routes
-import Plp from '~/modules/PLP/pages/plp'
-import Pdp from '~/modules/PDP/pages/pdp'
+import { Linking, Text } from 'react-native'
 import Cart from '~/modules/Cart/pages/cart'
-import { Text } from 'react-native'
+import Pdp from '~/modules/PDP/pages/pdp'
+import Plp from '~/modules/PLP/pages/plp'
 
 const Stack = createNativeStackNavigator()
 
@@ -29,6 +28,10 @@ export default function AppRoutes() {
       },
     },
   }
+
+  Linking.addEventListener('url', ({ url }) => {
+    console.log(url)
+  })
 
   return (
     <NavigationContainer
